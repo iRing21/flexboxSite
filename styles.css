@@ -40,7 +40,7 @@
 
 body {
     background-color: floralwhite;
-    height: auto;
+    max-height: 100%;
     width: 100%;
     display: flexbox;
     flex-direction: row;
@@ -76,6 +76,16 @@ a {
     font-weight: bold; 
 }
 
+.sectionHeader{
+    text-align: center;
+    border: 5px black groove;
+    width: auto;
+    padding: 5px;
+    background-image: url('media/productsH2background.png');
+    background-size: contain;
+    box-shadow: 5px 5px darkred;
+}
+
 /* Header & Nav */
 
 header {
@@ -91,10 +101,11 @@ header {
     box-shadow: 5px 5px darkred;
 }
 
-.headerDiv {
+.headerDiv, .footerDiv {
     display: flex;
     justify-content: center;
     align-content: center;
+    align-self: center;
     max-width: 20%;
     flex-grow: 1;
     flex-shrink: 1;
@@ -173,6 +184,7 @@ nav a {
     margin-left: 7%;
     margin-right: 7%;
     justify-self: center;
+    max-height: 15%;
 }
 
 #missionStatement {
@@ -188,12 +200,94 @@ nav a {
     line-height: 1.5;
 }
 
-/* Products */
+/* Products and Employees */
 
-/* Employees */
+.productEmployeeSections {
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 3%;
+    margin-right: 7%;
+    margin-left: 7%;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.bigBoxDiv {
+    display: flex;
+    margin-top: 3%;
+    margin-left: inherit;
+    margin-right: inherit;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    flex-shrink: 1;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.productBox {
+    max-width: 20%;
+    height: auto;
+    text-align: center; 
+    align-content: center;
+    border: 5px black solid;
+    padding: 10px;
+    line-height: 1.5;
+    background-color: lightsteelblue;
+    box-shadow: 5px 5px darkred;
+}
+
+.productImg {
+    max-width: 100%;
+    height: auto;
+    justify-self: center;
+    align-content: center;
+}
+
+.employeeBox {
+    max-width: 20%;
+    height: auto;
+    text-align: center; 
+    align-content: center;
+    border: 5px black solid;
+    padding: 10px;
+    line-height: 1.5;
+    background-color: lightsteelblue;
+    box-shadow: 5px 5px darkred;
+}
+
+.employeeImg {
+    max-width: 100%;
+    height: auto;
+    justify-self: center;
+    align-content: center;
+    border-radius: 50%;
+}
 
 /* Footer */
 
+footer {
+    margin-top: 3%;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    color: ivory;
+    background-color: black;
+    margin-bottom: 0px;
+}
+
 /* Tablet Landscape & Portrait */
 
-/* Phone Landscape & Portrait */
+/* Phone Landscape & Portrait 
+    -don't display product descriptions/alternate short descriptions
+    -set min font sizes, dont forget header and footer
+
+*/
+
