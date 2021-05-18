@@ -40,7 +40,7 @@
 
 body {
     background-color: floralwhite;
-    max-height: 100%;
+    height: 100vh;
     width: 100%;
     display: flexbox;
     flex-direction: row;
@@ -64,7 +64,6 @@ h3 {
 
 h4 {
     font-family: 'Lobster', cursive;
-
 }
 
 p {
@@ -84,12 +83,13 @@ a {
     background-image: url('media/productsH2background.png');
     background-size: contain;
     box-shadow: 5px 5px darkred;
+    height: 25px;
 }
 
 /* Header & Nav */
 
 header {
-    height: 50px;
+    height: 5%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -144,13 +144,12 @@ nav a {
 #titleSplash {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 2;
+    flex-grow: 1;
     background-image: url('media/splashRedacted.jpg');
     background-position: center;
     background-repeat: repeat-x;
     background-size: auto;
-    min-height: 333px;
-    max-height: 667px;
+    height: 20%;
     justify-content: center;
     align-content: center;
     justify-self: center;
@@ -164,7 +163,7 @@ nav a {
     text-align: center;
     justify-self: center;
     align-self: center;
-    font-size: 5vw;
+    font-size: 3vw;
     color: white;
 }
 
@@ -174,7 +173,6 @@ nav a {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 2;
-    height: 500px;
     justify-content: center;
     align-content: center;
     background-image: url('media/dick.jpg');
@@ -184,7 +182,6 @@ nav a {
     margin-left: 7%;
     margin-right: 7%;
     justify-self: center;
-    max-height: 15%;
 }
 
 #missionStatement {
@@ -215,11 +212,17 @@ nav a {
     align-content: center;
 }
 
+.productEmployeeSections h4 {
+    font-size: 14px;
+}
+
+.productEmployeeSections p {
+    font-size: 10px;
+}
+
 .bigBoxDiv {
     display: flex;
     margin-top: 3%;
-    margin-left: inherit;
-    margin-right: inherit;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 2;
@@ -283,11 +286,56 @@ footer {
     margin-bottom: 0px;
 }
 
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    body {
+        align-content: space-between;
+    }
+
+    .headerDiv, .footerDiv { 
+        font-size: 20px !important;
+    }
+
+    #missionStatement, {
+        font-size: 14px;
+    }
+
+    .productEmployeeSections {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+}
+
+
 /* Tablet Landscape & Portrait */
+        /* Landscape */
 
-/* Phone Landscape & Portrait 
-    -don't display product descriptions/alternate short descriptions
-    -set min font sizes, dont forget header and footer
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .headerDiv, .footerDiv { 
+        font-size: 20px;
+    }
 
-*/
+    #missionStatement {
+        font-size: 25px;
+    }
+
+    .productEmployeeSections {
+        font-size: 20px;
+    }
+
+    .productEmployeeSections p {
+        display: none;
+    }
+
+}
+
 
